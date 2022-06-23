@@ -29,6 +29,7 @@ public class DMakerController {
 
   @GetMapping("/developer/{memberId}")
   public DeveloperDetailDto getDeveloperDetail(@PathVariable String memberId) {
+    log.info("memberId : {}", memberId);
     return dMakerService.getDeveloperDetail(memberId);
   }
 
